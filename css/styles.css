@@ -1,0 +1,165 @@
+:root {
+  --accent-color: #10657e;
+  --shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  --border-style: 1px solid #000;
+  --gap: 8px;
+}
+
+/* GENERAL ROOLS*/
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+p {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+}
+
+.container {
+  width: 860px;
+  margin: 0 auto;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  margin-bottom: 16px;
+}
+
+/* INDEX.html */
+
+.main {
+  margin-top: 24px;
+}
+
+.list-item:not(:first-child) {
+  margin-top: 16px;
+}
+
+/* FLEXBOX.html */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.flex_item {
+  flex: 1;
+  padding: 8px;
+  border: var(--border-style);
+}
+
+.content_box {
+  flex-direction: row-reverse;
+  min-height: 240px;
+}
+
+.header__flexbox {
+  min-height: 50px;
+}
+
+.aside__flexbox {
+  max-width: 25%;
+}
+
+/* GRID.html */
+.grid {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'nav nav'
+    'main sidebar'
+    'footer footer';
+  grid-template-columns: 1fr 25%;
+  grid-gap: var(--gap);
+}
+
+.grid_item {
+  padding: 8px;
+  border: var(--border-style);
+}
+
+.header__grid {
+  grid-area: header;
+  min-height: 50px;
+}
+
+.nav__grid {
+  grid-area: nav;
+}
+
+.aside__grid {
+  grid-area: sidebar;
+  min-height: 240px;
+}
+
+.main__grid {
+  grid-area: main;
+}
+
+.footer__grid {
+  grid-area: footer;
+  min-height: 50px;
+}
+
+/* ANIMATION.html */
+.wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.back-btn {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: rotationAndColorChange 10s linear infinite;
+}
+
+@keyframes rotationAndColorChange {
+  0% {
+    transform: rotate(0deg);
+    background-color: red;
+  }
+  25% {
+    transform: rotate(-180deg);
+    background-color: orange;
+  }
+  50% {
+    transform: rotate(-360deg);
+    background-color: green;
+  }
+  75% {
+    transform: rotate(-180deg);
+    background-color: orange;
+  }
+  100% {
+    transform: rotate(0deg);
+    background-color: red;
+  }
+}
