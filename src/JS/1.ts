@@ -1,5 +1,3 @@
-// Напишите функцию deepEqual для проверки двух обьектов на идентичность
-
 function deepEqual(x: Object, y: Object) {
   // Перевіряю на null
   if (x === null && y === null) {
