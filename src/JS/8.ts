@@ -27,5 +27,5 @@ function combos(num: number) {
   return result;
 }
 
-// Примеры использования
-console.log(combos(3));
+// Застосування
+console.log(combos(5));
